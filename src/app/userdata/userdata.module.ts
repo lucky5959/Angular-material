@@ -7,6 +7,7 @@ import { ReactiveFormsModule, FormGroup, FormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material';
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+// import { Generic } from './generic.service.service'
 import {PortalModule} from '@angular/cdk/portal';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import {CdkStepperModule} from '@angular/cdk/stepper';
@@ -48,7 +49,9 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { UploadDocumentComponent } from './upload-document/upload-document.component';
 @NgModule({
-  declarations: [UserdatadatatableComponent, SideNavComponent, UploadDocumentComponent],
+  declarations: [UserdatadatatableComponent, SideNavComponent, UploadDocumentComponent,
+   
+    ],
   imports: [
     CommonModule,
     MatTableModule,

@@ -1,23 +1,28 @@
 
         <div style="margin-left: 50px;"><label >Single File Upload</label>
-            <div>
-                <input #myInput type="file" name="file" (change)="uploadSingleFile($event.targrt.files)">
+            <!-- <div>
+                <input #myInput type="file" name="file" (change)="selectFile($event)">
+        <button (click)="uploadFile()">Submit</button>
         
-        
-            </div>
-            <div>
-                {{this.fileData.name}}
-            </div>
+            </div> -->
+           
+            <div class="col-md-6">
+                <label class="control-heading">Select File</label>
+                <input type="file" [multiple]="multiple" #fileInput (change)="selectFile($event)">
+                <input type="button" style="margin-top: 15px;"  class="data-entry-button btn-pink" (click)="uploadFile()" value="Upload"  data-html="true" data-toggle="tooltip" data-placement="bottom" />
+           </div>
         </div><br/>
 
 
-<div style="margin-left: 50px;"><label>Multiple File Upload</label>
+<!-- <div style="margin-left: 50px;"><label>Multiple File Upload</label>
     <div>
         <input multiple #myInput type="file" name="file" (change)="uploadFile($event)">
 
 
     </div>
     <div *ngFor="let files of this.arrayofFiles">
+        <span (click)="download(files)">
         {{files.name}}
+        </span>
     </div>
-</div>
+</div> -->
