@@ -1,0 +1,52 @@
+<mat-sidenav-container fullscreen color="primary">
+    <mat-sidenav #sidenav  mode="side" class="example-sidenav" [ngStyle]="{ 'width.em': sidenavWidth }" opened="true" (mouseenter)="increase()"
+      (mouseleave)="decrease()">
+      <div class="logomain">
+          <img src="../../../assets/logo.jpg" width="50" height="60">
+      </div>
+      <mat-nav-list>
+        <mat-list-item routerLink="1" routerLinkActive="active" >
+          <mat-icon mat-list-icon>person</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5 class="lead">About</h5>
+          </div>
+        </mat-list-item>
+  
+        <mat-list-item routerLink="2" routerLinkActive="active">
+          <mat-icon mat-list-icon>settings</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5 class="lead">Services</h5>
+          </div>
+        </mat-list-item>
+  
+        <mat-list-item routerLink="3" routerLinkActive="active">
+          <mat-icon mat-list-icon>local_phone</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5 class="lead">Contact</h5>
+          </div>
+        </mat-list-item>
+  
+  
+  
+      </mat-nav-list>
+  
+    </mat-sidenav>
+    
+    <!-- <div class="example-sidenav-content"> -->
+      <!-- <router-outlet></router-outlet> -->
+      <div style="height: 80vh;">
+        <mat-toolbar color="primary">
+          <mat-toolbar-row>
+            <button mat-icon-button (click)="sidenav.toggle()" >
+              <mat-icon>menu</mat-icon>Cashapona
+            </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+    </div>
+    
+  
+  
+  </mat-sidenav-container>
